@@ -1,0 +1,180 @@
+:root {
+    --primary-blue: #2874f0;
+    --yellow: #fb641b;
+    --bg-light: #f1f3f6;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--primary-blue);
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logo span {
+    color: #ffe500;
+}
+
+.search-container {
+    display: flex;
+    flex: 0.6;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-container button {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    color: var(--primary-blue);
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Banner */
+.hero {
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3rem; text-shadow: 2px 4px 10px rgba(0,0,0,0.3); }
+
+/* Main Grid */
+.main-container {
+    padding: 40px 10%;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--primary-blue);
+    display: inline-block;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 3D Product Card Effect */
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    perspective: 1000px; /* For 3D depth */
+    cursor: pointer;
+}
+
+.card-inner {
+    padding: 20px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.product-card:hover .card-inner {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.content-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.discount {
+    color: #388e3c;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.stars {
+    color: #ff9f00;
+    margin: 10px 0;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--yellow);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #e65100;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #212121;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
